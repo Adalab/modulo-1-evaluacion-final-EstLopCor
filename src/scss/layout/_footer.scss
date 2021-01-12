@@ -1,7 +1,45 @@
-.page__footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  padding: 1rem;
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-footer;
+  &__button {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -25px;
+    box-shadow: 0 2px 4px 0 #000;
+  }
+  &__sections {
+    font-family: $font-text;
+    color: $primary-color;
+    text-transform: uppercase;
+    font-size: 1rem;
+    list-style-type: none;
+    text-align: center;
+  }
+  &__socialnetworks {
+    font-family: $font-text;
+    color: $primary-color;
+    text-transform: uppercase;
+    font-size: 1rem;
+    list-style-type: none;
+    text-align: center;
+    margin-top: 30px;
+  }
+  &__small {
+    font-family: $font-text;
+    color: $primary-color;
+    font-size: 0.875rem;
+    text-align: center;
+    margin: 45px 0;
+    &--heart {
+      color: $secundary-color;
+    }
+  }
 }
