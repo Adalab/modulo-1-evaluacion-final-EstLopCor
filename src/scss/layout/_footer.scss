@@ -1,5 +1,6 @@
 .footer {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -14,23 +15,34 @@
     position: relative;
     top: -25px;
     box-shadow: 0 2px 4px 0 #000;
+    @media all and (min-width: 768px) {
+    }
   }
   &__sections {
     font-family: $font-text;
-    color: $primary-color;
     text-transform: uppercase;
     font-size: 1rem;
     list-style-type: none;
     text-align: center;
+    &--link {
+      color: $primary-color;
+      text-decoration: none;
+    }
   }
   &__socialnetworks {
     font-family: $font-text;
-    color: $primary-color;
     text-transform: uppercase;
     font-size: 1rem;
     list-style-type: none;
     text-align: center;
     margin-top: 30px;
+    @media all and (min-width: 768px) {
+      margin-top: 0;
+    }
+    &--link {
+      color: $primary-color;
+      text-decoration: none;
+    }
   }
   &__small {
     font-family: $font-text;
@@ -38,8 +50,17 @@
     font-size: 0.875rem;
     text-align: center;
     margin: 45px 0;
+    @media all and (min-width: 768px) {
+      margin: 0;
+    }
     &--heart {
       color: $secundary-color;
     }
+  }
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+    padding: 45px 0;
+    justify-content: space-around;
+    align-items: flex-start;
   }
 }

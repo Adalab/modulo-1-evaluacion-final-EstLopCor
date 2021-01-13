@@ -2,16 +2,38 @@
   background-color: $color-reason;
   text-align: center;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  @media all and (min-width: 768px) {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
   &__title {
     font-family: $font-title;
-    margin-bottom: 45px;
-    margin-top: 30px;
+    margin: auto;
+    @media all and (min-width: 768px) {
+      grid-column: 1/4;
+      grid-row: 1/2;
+    }
+  }
+  &item1 {
+    @media all and (min-width: 768px) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+  }
+  &item2 {
+    @media all and (min-width: 768px) {
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
+  }
+  &item3 {
+    @media all and (min-width: 768px) {
+      grid-column: 3/4;
+      grid-row: 2/3;
+    }
   }
   &__list {
-    grid-row: 2/5;
-    list-style-type: none;
-    margin: 0 70px;
     &--title {
       font-family: $font-title;
       font-size: 1.125rem;
@@ -19,10 +41,14 @@
     &--text {
       font-family: $font-text;
       font-size: 1.125rem;
-      margin-bottom: 45px;
+      margin: 0 70px 45px 70px;
+      @media all and (min-width: 768px) {
+        margin: 0 35px 30px;
+      }
     }
   }
   &__button {
+    grid-row: span 1;
     text-decoration: none;
     font-family: $font-text;
     color: $primary-color;
@@ -31,9 +57,13 @@
     padding: 0 29.5px 0 30.5px;
     width: 184px;
     height: 45px;
-    margin-bottom: 60px;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media all and (min-width: 768px) {
+      grid-column: 1/4;
+      grid-row: 3/4;
+    }
   }
 }
