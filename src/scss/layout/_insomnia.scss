@@ -8,6 +8,9 @@
     font-size: 0.875rem;
     color: #8ccbea;
     padding-top: 30px;
+    @media all and (min-width: 1200x) {
+      padding-top: 60px;
+    }
   }
   &__title {
     font-family: $font-title;
@@ -44,6 +47,11 @@
     @media all and (min-width: 1200px) {
       width: 160px;
     }
+  }
+  &__button:hover {
+    background-color: $secundary-color;
+    color: $primary-color;
+    font-size: 1.5rem;
   }
   @media all and (min-width: 768px) {
     margin: 0 39px;
