@@ -3,9 +3,13 @@
   text-align: center;
   display: grid;
   grid-template-rows: repeat(5, 1fr);
+  padding-bottom: 30px;
   @media all and (min-width: 768px) {
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 45px;
+    padding: 0 40px 60px;
   }
   &__title {
     font-family: $font-title;
@@ -13,6 +17,7 @@
     @media all and (min-width: 768px) {
       grid-column: 1/4;
       grid-row: 1/2;
+      margin-bottom: 0;
     }
   }
   &item1 {
@@ -41,9 +46,9 @@
     &--text {
       font-family: $font-text;
       font-size: 1.125rem;
-      margin: 0 70px 45px 70px;
+      margin: 0 70px 45px;
       @media all and (min-width: 768px) {
-        margin: 0 35px 30px;
+        margin: 0 35px;
       }
     }
   }
