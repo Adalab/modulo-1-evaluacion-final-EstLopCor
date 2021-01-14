@@ -1,5 +1,6 @@
 .footer {
-  background-color: $color-footer;
+  background-color: $color-burger;
+  color: $color-title;
 
   &__button {
     height: 45px;
@@ -20,11 +21,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     @media all and (min-width: 768px) {
       flex-direction: row;
       justify-content: space-around;
       align-items: flex-start;
-      padding-bottom: 45px;
+      padding-bottom: 75px;
     }
     @media all and (min-width: 1200px) {
       margin: 0 350px;
@@ -36,12 +38,13 @@
     font-size: 1rem;
     list-style-type: none;
     text-align: center;
+    color: $color-title;
     @media all and (min-width: 768px) {
       text-align: left;
-      order: 2;
+      order: 1;
     }
     &--link {
-      color: $primary-color;
+      color: $color-title;
       text-decoration: none;
     }
   }
@@ -55,26 +58,31 @@
     @media all and (min-width: 768px) {
       text-align: left;
       margin-top: 0;
-      order: 3;
+      order: 2;
     }
     &--link {
-      color: $primary-color;
+      color: $color-title;
       text-decoration: none;
     }
   }
   &__small {
     font-family: $font-text;
-    color: $primary-color;
+    color: $color-title;
     font-size: 0.875rem;
     text-align: center;
     margin: 45px 0;
     @media all and (min-width: 768px) {
       margin: 0;
       text-align: left;
-      order: 1;
+      order: 3;
     }
     &--heart {
       color: $secundary-color;
+    }
+    &--components {
+      @media all and (min-width: 768px) {
+        color: $secundary-color;
+      }
     }
   }
 }
